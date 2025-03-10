@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mama Ba's Online Catering Services</title>
+    
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav {
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .logo {
+        padding: 10px 10px;
+        letter-spacing: 2px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .navlinks {
+        float: right;
+        padding-right: 30px;
+        cursor: pointer;
+      }
+
+      .navlinks ul {
+        list-style: none;
+      }
+
+      .navlinks ul li {
+        display: inline-block;
+        padding-right: 30px;
+        cursor: pointer;
+      }
+
+      .navlinks ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+
+      .navborder::after {
+        content: "";
+        width: 0;
+        background-color: white;
+        height: 2px;
+        display: block;
+        transition: width 0.3s ease;
+      }
+
+      .navborder:hover::after {
+        width: 100%;
+      }
+
+      .container {
+    background-image: linear-gradient(to bottom, rgba(145, 146, 122, 0.62), rgba(53, 94, 59)), url("");
+    background-size: cover;
+    height: 695px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .login-form {
+        background-color: ghostwhite;
+        width: 500px;
+        height: auto;
+        padding: 30px;
+        display: grid;
+        border-radius: 8px;
+        text-align: left;
+      }
+
+      input[type=text], input[type=email], input[type=password] {
+        margin-bottom: 20px;
+        border-radius: 7px;
+        padding: 6px;
+        margin-top: 3px;
+        width: 100%;
+      }
+
+      button.login {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .forget {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="logo">
+        <h2> Mama Ba's Online Catering Services </h2>
+      </div>
+      
+      <div class="navlinks">
+        <ul>
+          <li><a class="navborder" href="">Home</a></li>
+          <li><a class="navborder" href="">Services</a></li>
+          <li><a class="navborder" href="C:\Users\Chloe\Desktop\New folder (2)\tle\about.html">About</a></li>
+          <li><a class="navborder" href="C:\Users\Chloe\Desktop\New folder (2)\tle\privacypolicy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <form class="login-form">
+        <h2 style="color:black;"> Login</h2>
+        <hr>
+        <br>
+        Name: <input type="text" placeholder="Enter name">
+        Email: <input type="email" placeholder="Enter email">
+        Password: <input type="password" placeholder="Enter Password">
+        <button class="login"><a href="" style="color: white; text-decoration: none;">Login</a></button>
+        <br>
+        <hr>
+        <br>
+        <div class="forget">
+          <p>Forget password? Click <a href="C:\Users\Chloe\Desktop\New folder (2)\tle\login.html">here</a></p>
+          <p>Don't have an account? Click <a href="C:\Users\Chloe\Desktop\New folder (2)\tle\signup.html">here</a></p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
