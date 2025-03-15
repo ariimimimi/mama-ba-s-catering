@@ -1,1 +1,172 @@
-"C:\Users\Chloe\Desktop\TLE.MAMABA'SONLINECATERINGSERVICES\Mama Ba's Online Catering Services.html"
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mama Ba's Online Catering Services</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav {
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .logo {
+      padding: 10px 10px;
+      letter-spacing: 2px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .navlinks ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navlinks ul li {
+      cursor: pointer;
+    }
+
+    .navlinks ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 17px;
+      text-transform: uppercase;
+    }
+
+    .navborder::after {
+      content: "";
+      width: 0;
+      background-color: white;
+      height: 2px;
+      display: block;
+      transition: width 0.3s ease;
+    }
+
+    .navborder:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      background-image: linear-gradient(to bottom, rgb(218, 210, 196), rgba(180, 131, 79, 1));
+      background-size: cover;
+      height: 695px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-form {
+      background-color: ghostwhite;
+      width: 500px;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    input[type=text], input[type=email], input[type=password] {
+      margin-bottom: 20px;
+      border-radius: 7px;
+      padding: 6px;
+      width: 100%;
+    }
+
+    button.login {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .forget {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="logo">
+      <h2>Mama Ba's Online Catering Services</h2>
+    </div>
+    <div class="navlinks">
+      <ul>
+        <li><a class="navborder" href="">Home</a></li>
+        <li><a class="navborder" href="">Services</a></li>
+        <li><a class="navborder" href="C:\Users\Chloe\Desktop\TLE.MAMABA'SONLINECATERINGSERVICES\about.html">About</a></li>
+        <li><a class="navborder" href="C:\Users\Chloe\Desktop\TLE.MAMABA'SONLINECATERINGSERVICES\privacypolicy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <form class="login-form" onsubmit="login(); return false;">
+      <h2 style="color:black;">Login</h2>
+      <hr>
+      <br>
+      Name: <input type="text" id="login-name" placeholder="Enter name" required>
+      Email: <input type="email" id="login-email" placeholder="Enter email" required>
+      Password: <input type="password" id="login-password" placeholder="Enter password" required>
+      <button class="login" type="submit">Login</button>
+      <br>
+      <hr>
+      <br>
+      <div class="forget">
+        <p>Forgot password? Click <a href="C:\Users\Chloe\Desktop\TLE.MAMABA'SONLINECATERINGSERVICES\forgot pass.html">here</a></p>
+        <p>Don't have an account? Click <a href="C:\Users\Chloe\Desktop\TLE.MAMABA'SONLINECATERINGSERVICES\signup.html">here</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Example signup function (in signup.html)
+    function signup() {
+        const name = document.getElementById('signup-name').value;
+        const email = document.getElementById('signup-email').value;
+        const password = document.getElementById('signup-password').value;
+        const confirmPassword = document.getElementById('signup-confirm-password').value;
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        // Save user info to localStorage
+        localStorage.setItem('userName', name);
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userPassword', password);
+        alert("Account created successfully!");
+        window.location.href = "C:\Users\Chloe\Desktop\TLE.MAMABA'SONLINECATERINGSERVICES\TEST.HTML"; // Redirect to homepage
+    }
+
+    // Login function
+    function login() {
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+
+        const storedEmail = localStorage.getItem('userEmail');
+        const storedPassword = localStorage.getItem('userPassword');
+
+        if (email === storedEmail && password === storedPassword) {
+            alert("Login successful!");
+            window.location.href = "C:\Users\Chloe\Desktop\TLE.MAMABA'SONLINECATERINGSERVICES\TEST.HTML"; // Redirect to homepage
+        } else {
+            alert("Invalid email or password!");
+        }
+    }
+  </script>
+</body>
+</html>
